@@ -34,7 +34,7 @@ int _erratoi(char *s)
  */
 void print_error(info_t *info, char *estr)
 {
-	_eputs(info->fnmae);
+	_eputs(info->fname);
 	_eputs(": ");
 	print_d(info->line_count, STDERR_FILENO);
 	_eputs(": ");
@@ -93,7 +93,7 @@ char *convert_number(long int num, int base, int flags)
 	char *ptr;
 	unsigned long n = num;
 
-	if (!(flags & CONVER_UNSIGNED) && num < 0)
+	if (!(flags & CONVERT_UNSIGNED) && num < 0)
 	{
 		n = -num;
 		sign = '-';
